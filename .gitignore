@@ -1,3 +1,9 @@
 .vscode
 dist
 node_modules
+modules
+!modules/example-module.js
+styles
+!styles/example-module.pcss
+fonts/*
+images/*
