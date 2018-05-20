@@ -1,3 +1,6 @@
-# Webpack starter kit (thekrux)
+# Webpack starter kit
 
-Need this. Instead of 'borrowing' it, thought it would be fun to write/familiarize.
+Instead of 'borrowing' a webpack starter kit, thought it would be fun to write/familiarize.
+
+## Development run
+`npm run dev`
