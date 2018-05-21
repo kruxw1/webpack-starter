@@ -1,23 +1,22 @@
-let path = require('path');
+const path = require('path');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
-  devtool: 'source-map',
-  devServer: {
-    contentBase: './dist',
-    watchContentBase: true,
-    host: 'localhost',
-    port: 3000,
-    open: true
-  },
+  plugins: [
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      title: 'Webpack starter kit'
+    })
+  ],
   module: {
     rules: [
       {
         test: /\.pcss$/,
         use: [
           'style-loader',
-          { 
+          {
             loader: 'css-loader',
             options: {
               importLoaders: 1
@@ -55,6 +54,6 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    extensions: [ '.pcss', '.js', '.json' ]
+    extensions: ['.pcss', '.js', '.json']
   }
 };

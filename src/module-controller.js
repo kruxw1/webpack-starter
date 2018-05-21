@@ -43,7 +43,7 @@ export default class ModuleController {
       return false;
     let moduleName = el.getAttribute('data-module');
     let className = this.hyphensToPascalCase(moduleName);
-    let moduleClass = require('modules/' + moduleName).default;
+    let moduleClass = require('./modules/' + moduleName).default;
     new moduleClass(el);
   }
 
