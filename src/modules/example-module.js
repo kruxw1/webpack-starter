@@ -1,4 +1,4 @@
-import './example-module';
+import '../styles/example-module-style';
 
 export default class ExampleModule {
   constructor(el) {

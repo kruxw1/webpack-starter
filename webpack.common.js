@@ -13,7 +13,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.pcss$/,
+        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -54,6 +54,6 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, "src"), "node_modules"],
-    extensions: ['.pcss', '.js', '.json']
+    extensions: ['.css', '.js', '.json']
   }
 };
